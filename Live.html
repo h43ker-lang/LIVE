@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event at Full Capacity</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        :root {
+            --error: #E53E3E;
+            --primary: #4A5568;
+            --background: #F7FAFC;
+            --text: #2D3748;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text);
+        }
+        
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            width: 90%;
+            max-width: 480px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 64px;
+            color: var(--error);
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+        
+        .capacity {
+            background: #EDF2F7;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 24px 0;
+        }
+        
+        .meter {
+            height: 8px;
+            background: #E2E8F0;
+            border-radius: 4px;
+            margin: 8px 0;
+            overflow: hidden;
+        }
+        
+        .fill {
+            height: 100%;
+            background: var(--error);
+            width: 100%;
+            border-radius: 4px;
+        }
+        
+        .count {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .btn:hover {
+            background: #2D3748;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">✖</div>
+        <h1>Event at Full Capacity</h1>
+        <p>All 790 available seats have been reserved. We cannot accept additional participants at this time.</p>
+        
+        <div class="capacity">
+            <div class="meter">
+                <div class="fill"></div>
+            </div>
+            <div class="count">790/790 seats filled (100%)</div>
+        </div>
+        
+        <a href="/events" class="btn">View Other Events</a>
+    </div>
+</body>
+</html>
